@@ -31,7 +31,7 @@ $IDS=intval(stripslashes(htmlspecialchars($_POST["ID"])));
 
 //LINK
 
-$url="https://dfghjkllkjh.herokuapp.com/";
+$url="https://asdfghjklfgh.herokuapp.com/";
 
 file_put_contents("ID.txt",$IDS);
  
